@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Activities</title>
+    <link href="{%static 'seed_school/style.css' %}" rel="stylesheet"/>
+    <link href="{%static 'seed_school/bootstrap.css' %}" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="homepage.htm" class="navbar-brand text-center text-light"><img src="{% static 'seed_school/images/logo.jpg' %} alt="" height="50px">
+            <h2>Trường mầm non SeedSchool</h2>
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="homepage.htm" class="nav-link">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a href="homepage.htm" class="nav-link">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="homepage.htm" class="nav-link">Liên hệ</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <table class="c2">
+            <div class="cat-item-info">
+                <p>
+                    <span><i class="icon-fontawesome-webfont-43 ico-category"></i>Người đăng: <label>Quản
+                            trị</label></span>
+                    <span><i class="icon-fontawesome-webfont-166 ico-category"></i>Ngày đăng:
+                        <label>22/2/2023</label></span>
+                </p>
+            </div>
+            <tr>
+                <th class="d1" colspan="3">
+                    <h3>&#x272A; Các hoạt động của bé</h3>
+                </th>
+            </tr>
+            <tr>
+                <th class="k1">Các bé tưới cây</th>
+                <th class="k1">Các bé nhặt rác</th>
+                <th class="k1">Các bé điểm danh</th>
+            </tr>
+            <tr>
+                <th class="k1"><img
+                        src="http://c0hoami.pgdcujut.edu.vn/wp-content/uploads/2019/01/z1243756816923_d830be820c880cb91052c663da6b56391.png"
+                        alt="" height="200px"></th>
+                <th class="k1"><img
+                        src="http://c0hoami.pgdcujut.edu.vn/wp-content/uploads/2019/01/z1243756983346_05af0083dc2ab262d98d881b7f8bdf1b1.png"
+                        alt="" height="200px"></th>
+                <th class="k1"><img
+                        src="http://c0hoami.pgdcujut.edu.vn/wp-content/uploads/2019/01/z1243757249323_90c080df64ccb0a591ddf2a66709d683.png"
+                        alt="" height="200px"></th>
+            </tr>
+        </table>
+        {% for comment in post.commets.all %}
+            <h4><strong>{{comment.author}}</strong></h4>
+            <h6><p>{{comment.date}}</p></h6>
+            <p>{{comment.body|linebreaks}}</p>        
+        {% endfor %}
+        {% if user.username%}
+                <form>
+                    <p><label>Bình luận:</label></p>
+                    <textarea id ="userComment" rows="4" cols="50" name="comment" placeholder = "Enter comment here..."></textarea>
+                    <br><br>
+                    <input type="submit" value="Bình luận"/>
+                {% comment %} <form action="{% url 'post'%}" method="POST">
+                    {% csrf_token %}
+                    <p><label>Bình luận:</label></p>
+                    {% comment %}
+                        {{form.body}}
+                    {% endcomment %}
+                </form>
+        {% endif %}
+        <!--break-->
+        <div class="navbar navbar-expand-lg navbar-dark dd">
+            <div class="container">
+                <div class="ff">
+                    <a href="">
+                        <h1 class="ee">Địa chỉ</h1>
+                    </a><br><br>
+                    <h1 class="ee">Seed School</h1>
+                    <h2 class="gg">Bách Khoa, Hai Bà Trưng, Hà Nội</h2>
+                    <h2 class="gg">Tel: 0985234761</h2>
+                    <h2 class="gg">Email: thanh.nd204691@sis.hust.edu.vn</h2>
+                    <h2 class="gg">Website: www.seedschool.org</h2>
+                </div>
+                <div class="hh"></div>
+                <div class="ff">
+                    <a href="">
+                        <h1 class="ee">Liên kết</h1>
+                    </a>
+                    <table class="jj">
+                        <tr>
+                            <td><a href="" class="text-dark"> Giới thiệu</a></td>
+                            <td><a href="" class="text-dark"> Liên hệ</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="" class="text-dark"> Khuôn viên trường</a></td>
+                            <td><a href="" class="text-dark"> Thông tin giáo viên</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="" class="text-dark"> Hoạt động của bé</a></td>
+                            <td><a href="" class="text-dark"> Thanh toán học phí</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hh"></div>
+                <div class="ff">
+                    <a href="">
+                        <h1 class="ee">Phản hồi quản trị viên</h1>
+                    </a>
+                    <h1 class="gg"></h1>
+                    <p><a href="">thanhak2k2@gmail.com</a></p>
+                </div>
+
+            </div>
+</body>
+
+</html>

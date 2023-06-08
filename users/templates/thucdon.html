@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link href="{%static 'seed_school/thuc_don.css' %}" rel="stylesheet"/>
+    <script src= "seedd_school/thuc_don.js"></script>
+</head>
+<body>
+<div id="cover">
+    <div id = "block_1">
+        <span id = "inline_1">
+            <div id="thuc_don">THỰC ĐƠN</div>
+            <div class="tuan_hoc">
+                <span id="tuan_hoc">Tuần học: </span>
+                <span id="tuanHoc">30</span>
+            </div>
+        </span>
+        <span id = "inline_2">
+            <label>Nhập tuần học :</label>
+            <input type="text" id="nhapTuanHoc" onkeydown="if (event.keyCode === 13) { hienThiThucDonCuaTH() }">
+            </br>
+            <button id="suaThucDon" onclick="suaThucDon()">Chỉnh sửa tuần học</button>
+            <button id="lapLai" onclick="lapLaiThucDonChoCaThang()">Lặp lại thực đơn cho cả tháng</button>
+        </span>
+    </div>
+
+    <table>
+        <thead>
+        <tr id="thu">
+            <th></th>
+            <th>Thứ 2</th>
+            <th>Thứ 3</th>
+            <th>Thứ 4</th>
+            <th>Thứ 5</th>
+            <th>Thứ 6</th>
+        </tr>
+        <tr id="ngay">
+            <th></th>
+            <div>
+                <th class="ngay">2023-03-27</th>
+            </div>
+            <div>
+                <th class="ngay">2023-03-28</th>
+            </div>
+            <div>
+                <th class="ngay">2023-03-29</th>
+            </div>
+            <div>
+                <th class="ngay">2023-03-30</th>
+            </div>
+            <div>
+                <th class="ngay">2023-03-31</th>
+            </div>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="buoi">Sáng</td>
+            <div>
+                <td><textarea class="sang" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="sang" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="sang" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="sang" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="sang" readonly spellcheck="false"></textarea></td>
+            </div>
+        </tr>
+        <tr>
+            <td class="buoi">Trưa</td>
+            <div>
+                <td><textarea class="trua" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="trua" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="trua" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="trua" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="trua" readonly spellcheck="false"></textarea></td>
+            </div>
+        </tr>
+        <tr>
+            <td class="buoi">Chiều</td>
+            <div>
+                <td><textarea class="chieu" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="chieu" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="chieu" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="chieu" readonly spellcheck="false"></textarea></td>
+            </div>
+            <div>
+                <td><textarea class="chieu" readonly spellcheck="false"></textarea></td>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+    <button id="luuButton" onclick="luuThucDon()" hidden>Lưu</button>
+    <button id="huySuaButton" onclick="huySuaThucDon()" hidden>Hủy</button>
+</div>
+</body>
+</html>

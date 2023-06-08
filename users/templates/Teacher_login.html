@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ĐĂNG NHẬP GIÁO VIÊN</title>
+    {% comment %} <link href="{%static 'seed_school/style.css' %}" rel="stylesheet"/>
+    <link href="{%static 'seed_school/bootstrap.css' %}" rel="stylesheet"/> {% endcomment %}
+    <link href="../static/seed_school/style.css" rel="stylesheet"/>
+    <link href="../static/seed_school/bootstrap.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="homepage.html" class="navbar-brand text-center text-light"><img src="../static/seed_school/images/logo.jpg" class="responsive-img" height="50px">Seed School</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link"> GIỚI THIỆU</a>
+                </li>
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link"> KHUÔN VIÊN TRƯỜNG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link"> LIÊN HỆ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+    <div class="jumbotron text-dark zzz bg-danger rounded-0 mb-0">
+        <form class="ccc" action="{% url 'login' %}" method="POST" >
+            {% csrf_token %}
+            <h1 class="text-dark">ĐĂNG NHẬP GIÁO VIÊN</h1>
+            <lable class="h4 text-light">Tài khoản </lable><input class="cc2" type="text" name="username" placeholder="Tên đăng nhập" size="40" required>
+            <br>
+            <lable class="h4 text-light">Mật khẩu </lable><input class="cc2" type="password" name="password" placeholder="Mật khẩu"  size="40" required>
+            <br>
+            <lable class="cc4"></lable><input type="checkbox" name="rememberme">Lưu mật khẩu<br>
+            <br>
+            <a><input class="btn btn-primary cc3" type="submit" value="Đăng nhập"></a>
+            <br>
+            <a href="{% url 'signup' %}" class="btn btn-primary cc3">Đăng ký</a>
+        </form>
+    </div>
+
+    <!--break-->
+    <div class="navbar navbar-expand-lg navbar-dark dd">
+        <div class="container">
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Địa chỉ</h1>
+                </a><br><br>
+                <h1 class="ee">Seed School</h1>
+                <h2 class="gg">Bách Khoa, Hai Bà Trưng, Hà Nội</h2>
+                <h2 class="gg">Tel: 0985234761</h2>
+                <h2 class="gg">Email: thanh.nd204691@sis.hust.edu.vn</h2>
+                <h2 class="gg">Website: www.seedschool.org</h2>
+            </div>
+            <div class="hh"></div>
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Liên kết</h1>
+                </a>
+                <table class="jj">
+                    <tr>
+                        <td><a href="" class="text-dark"> Giới thiệu</a></td>
+                        <td><a href="" class="text-dark"> Liên hệ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="" class="text-dark"> Khuôn viên trường</a></td>
+                        <td><a href="" class="text-dark"> Thông tin giáo viên</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="" class="text-dark"> Hoạt động của bé</a></td>
+                        <td><a href="" class="text-dark"> Thanh toán học phí</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hh"></div>
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Phản hồi quản trị viên</h1>
+                </a>
+                <h1 class="gg"></h1>
+                <p><a href="">thanhak2k2@gmail.com</a></p>
+            </div>
+
+        </div>
+</body>
+
+</html>

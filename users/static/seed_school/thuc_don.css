@@ -1,0 +1,135 @@
+body *{
+    font-family: Arial, sans-serif;
+}
+body{
+    align-items: center;
+}
+#cover{
+    background-color: #67D5CE;
+    width:1440px;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+#block_1{
+    background-color: white;
+    height:100px;
+    width: 100%;
+    padding: 15px 0;
+}
+#inline_1{
+    display: inline-block;
+    width:400px;
+    margin-left: 50px;
+}
+#thuc_don{
+    color: #03332B;
+    margin-top: 12px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.tuan_hoc{
+    margin-top:5px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+#tuan_hoc, #tuanHoc{
+    font-size: 25px;
+}
+#inline_2{
+    display:inline-block;
+    width: 400px;
+    float:right;
+    margin-top: 0;
+    background-color: #B2ECE6;
+    margin-right: 50px;
+    padding: 10px;
+}
+#inline_2 *{
+    height:30px;
+    margin-left:10px;
+    margin-top: 10px;
+}
+#inline_2 input{
+    width:30px;
+    height: 20px;
+}
+#thu, #ngay th{
+    background-color: white;
+}
+#thu th{
+    border: 5px solid #67D5CE;
+    border-bottom: none;
+    font-size: 25px;
+    color:#03332B;
+    padding:5px;
+}
+#ngay th{
+    border: 5px solid #67D5CE;
+    border-top: none;
+}
+.buoi{
+    background-color: white;
+}
+tbody td{
+    background-color: white;
+    border: 5px solid #67D5CE;
+}
+#thu th{
+
+}
+.buoi{
+    font-size: 25px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    padding:5px;
+    color:#03332B;
+    font-weight: 300;
+}
+.sang{
+    height: 100px;
+}
+.trua{
+    height: 200px;
+}
+.chieu{
+    height: 100px;
+}
+#luuButton{
+    margin-left:40px;
+    height: 30px;
+    margin:5px auto;
+    font-size: 20px;
+    width:60px;
+    margin-left:600px;
+}
+#huySuaButton{
+    margin-left:40px;
+    height: 30px;
+    margin:5px auto;
+    font-size: 20px;
+    width:60px;
+    margin-left:20px;
+}
+
+table{
+    border-spacing: 0;
+    background-color: white;
+    margin-top:30px;
+    margin: 30px auto 0;
+}
+textarea{
+    border: none;
+    resize: none;
+    background-color: white;
+    width: 250px;
+    font-size: 20px;
+    line-height: 25px;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+textarea:focus {
+    outline: none;
+}
+

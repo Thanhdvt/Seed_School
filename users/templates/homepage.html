@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seed School</title>
+    <link href="{%static 'seed_school/style.css' %}" rel="stylesheet"/>
+    <link href="{%static 'seed_school/bootstrap.css' %}" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-info ">
+        <div class="container-fluid">
+            <a href="homepage.htm" class="navbar-brand text-center text-warning"><img src="{% static 'seed_school/images/logo.jpg' %} alt=""
+                    height="70px"></a>
+
+            <table width="40%" class="">
+                <tr height="40px">
+                    <td>&#x276F;<a href="" class="text-light"> GIỚI THIỆU</a></td>
+                    <td>&#x276F;<a href="{% url 'classroom' %}" class="text-light"> THÔNG TIN CÁC LỚP</a></td>
+                </tr>
+                <tr height="40px">
+                    <td>&#x276F;<a href="" class="text-light"> LIÊN HỆ</a></td>
+                    <td>&#x276F;<a href="{% url 'fee' %}" class="text-light"> THANH TOÁN HỌC PHÍ</a></td>
+                </tr>
+                <tr height="40px">
+                    <td>&#x276F;<a href="{% url 'activity' %}" class="text-light"> HOẠT ĐỘNG CỦA BÉ</a></td>
+                    <td>&#x276F;<a href="{% url 'logout' %}" class="text-light"> ĐĂNG XUẤT</a></td>
+                </tr>
+            </table>
+
+            <div class="line"></div>
+
+            <table width="35%" class="">
+                <tr height="40px">
+                    <td><a href="" class="text-dark"> TẦM NHÌN </a></td>
+                    <td><a href="" class="text-dark"> HỢP TÁC </a></td>
+                </tr>
+                <tr height="40px">
+                    <td><a href="" class="text-dark"> GIẢI THƯỞNG </a></td>
+                    <td><a href="homepage.htm" class="text-dark"> THƯ VIỆN ẢNH </a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--break-->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-3 bg-light">
+                <div class="navbar navbar-expand-lg navbar-dark bg-success">
+                    <a href="" class="navbar-brand text-center text-light"><img src="notice.png" alt=""
+                            height="30px">THÔNG BÁO</a>
+                </div>
+                &#x27A4; CHÍNH THỨC:<a href="{% url 'admission' %}">
+                    <p class="h6 text-danger">&#x26AC; MỞ ĐĂNG KÍ TUYỂN SINH CHO NĂM HỌC MỚI 2023-2024</p>
+                </a>
+                &#x27A4; HỌC SINH:<a href="">
+                    <p class="h6">&#x26AC; CHƯƠNG TRÌNH NGOẠI KHÓA THÁNG 2-2023<sup></p>
+                </a>
+                <a href="">
+                    <p class="h6">&#x26AC; HOẠT ĐỘNG BÉ KHỎE BÉ NGOAN THÁNG 2-2023</p>
+                </a>
+                &#x27A4; BỔ SUNG:<a href="">
+                    <p class="h6 text-danger">&#x26AC; HOẠT ĐỘNG RÀ SOÁT KIỂM TRA, TU BỔ CƠ SỞ VẬT CHẤT THÁNG 2-2023</p>
+                </a>
+
+                <div class="ss"></div>
+
+                <div class="list-group shadow pp">
+                    <a href="" class="list-group-item list-group-item-action active"><strong
+                            class="text-light"></strong>  THỤC ĐƠN HÔM NAY</a>
+                    <a href="" class="list-group-item list-group-item-action h6 bg-warning"><strong
+                            class="text-light"></strong> NHÀ TRẺ</a>
+                    <table width ="50%">
+                        <h6> Bữa Sáng</h6>
+                        <h7> Sữa, Cháo gà</h7>
+                        <br>
+                        <h6> Bữa Trưa</h6>
+                        <h7> Cháo thịt, Rau cải, Dưa hấu</h7>
+                    </table>
+                        <br>
+                    <a href="" class="list-group-item list-group-item-action h6 bg-warning"><strong
+                            class="text-light"></strong> MẪU GIÁO</a>
+                    <table width ="50%">
+                        <h6> Bữa Sáng</h6>
+                        <h7> Sữa, Phở gà</h7>
+                        <br>
+                        <h6> Bữa Trưa</h6>
+                        <h7> Cơm, Cá sốt cà chua, Rau cải xanh</h7>
+                    </table>
+                </div>
+
+                <div class="ss"></div>
+
+                <div class="list-group shadow pp">
+                    <a href="" class="list-group-item list-group-item-action bg-primary"><strong
+                            class="text-light"></strong>  HOẠT ĐỘNG TRONG NGÀY</a>
+                    <table width ="50%">
+                        <h7> Điểm danh</h7>
+                        <h7> Ăn sáng</h7>
+                        <h7> Học chữ</h7>
+                        <h7> Ăn trưa</h7>
+                        <h7> Chơi trò chơi</h7>
+                    </table>                   
+                </div>
+
+                <div class="card shadow tt border-0">
+                    <div class="card-top bg-success text-white">LỜI NHẮN NHỦ</div>
+                    <img src="principal.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="h6 cc text-Secondary">
+                            Tại SeedSchool, chúng tôi mong muốn cung cấp một môi trường thoải mái, hạnh phúc và đa dạng
+                            cho các em nhỏ, nơi không chỉ nuôi dưỡng khả năng sáng tạo của các bé và khuyến khích các
+                            giá trị tốt đẹp hơn như sự đồng cảm, yêu thương và sự năng động mà còn giúp các bé phát huy
+                            năng khiếu thực sự và phát triển toàn diện về thể chất, tinh thần.
+                        </h2>
+                    </div>
+                    <div class="card-footer">HIỆU TRƯỞNG: NGUYỄN DUY THÀNH</div>
+                </div>
+
+            </div>
+            <div class="col-9">
+                <div class="jumbotron cover"></div>
+                <h1 class="text-primary aa">THƯ VIỆN ẢNH</h1>
+                <table height="200px">
+                    <tr>
+                        <th>
+                            <h1 class="bb">Khám sức khỏe</h1>
+                        </th>
+                        <td rowspan="2">
+                            <img src="health.jpg" alt="" height="250px" width="450px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="cc ml-4"> Việc khám sức khỏe được thực hiện định kỳ không những phát hiện sớm các
+                                trường hợp bệnh trong học đường mà học sinh hay mắc phải như tình trạng béo phì, suy
+                                dinh dưỡng, tật khúc xạ, bệnh răng miệng, bệnh suy tim, thấp tim, hở van tim, các rối
+                                loạn về cơ, xương khớp, các bệnh về hô hấp, về rối loạn tâm thần… và các bệnh khác mà
+                                gia đình chưa phát hiện được do bệnh không có triệu chứng biểu hiện rõ rệt.
+                                <h6>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td rowspan="2">
+                            <img src="sports.jpg" alt="" height="250px" width="450px">
+                        </td>
+                        <th>
+                            <h1 class="bb">Sân chơi</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="cc ml-4">Sân chơi rộng khoảng 2500 mét vuông tạo cơ hội cho một loạt các môn thể
+                                thao và hoạt động ngoài trời. Khuôn viên trường còn có nhà chơi bóng dành cho các lớp
+                                mầm non và hai sân cỏ nhân tạo nhỏ để các lớp tập đá bóng.
+                            </h6>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <h1 class="bb">Hội thi bé khỏe bé ngoan </h1>
+                        </th>
+                        <td rowspan="2">
+                            <img src="contest.jpg" alt="" height="250px" width="450px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="cc ml-4">Hội thi “Bé khỏe – bé ngoan” được tổ chức nhằm tạo điều kiện tốt cho trẻ
+                                phát triển toàn diện về thể chất, trí tuệ, tình cảm đồng thời giúp phát hiện những tài
+                                năng, năng khiếu của trẻ qua các phần thi khác nhau. Bên cạnh đó, hội thi còn đóng vai
+                                trò như là cơ sở để nhà trường đánh giá được chất lượng chăm sóc, giáo dục trẻ và khẳng
+                                định được niềm tin đối với phụ huynh khi gửi con học tại trường.
+                            </h6>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!--break-->
+    <div class="navbar navbar-expand-lg navbar-dark dd">
+        <div class="container">
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Địa chỉ</h1>
+                </a><br><br>
+                <h1 class="ee">Seed School</h1>
+                <h2 class="gg">Bách Khoa, Hai Bà Trưng, Hà Nội</h2>
+                <h2 class="gg">Tel: 0985234761</h2>
+                <h2 class="gg">Email: thanh.nd204691@sis.hust.edu.vn</h2>
+                <h2 class="gg">Website: www.seedschool.org</h2>
+            </div>
+            <div class="hh"></div>
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Liên kết</h1>
+                </a>
+                <table class="jj">
+                    <tr>
+                        <td><a href="" class="text-dark"> Giới thiệu</a></td>
+                        <td><a href="" class="text-dark"> Liên hệ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="" class="text-dark"> Khuôn viên trường</a></td>
+                        <td><a href="" class="text-dark"> Thông tin giáo viên</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="" class="text-dark"> Hoạt động của bé</a></td>
+                        <td><a href="" class="text-dark"> Thanh toán học phí</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hh"></div>
+            <div class="ff">
+                <a href="">
+                    <h1 class="ee">Phản hồi quản trị viên</h1>
+                </a>
+                <h1 class="gg"></h1>
+                <p><a href="">thanhak2k2@gmail.com</a></p>
+            </div>
+
+        </div>
+</body>
+
+</html>
